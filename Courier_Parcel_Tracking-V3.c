@@ -37,9 +37,13 @@ double computeCharge(int weightGrams)
     int extra_weight = 0;
     int extra_kg = 0;
 
-    if(weightGrams <= 500){
+    if(weightGrams > 0 && weightGrams <= 500){
 
         charge = BASE_CHARGE;
+    }
+    else if(weightGrams <= 0)
+    {
+        charge = 0.0;
     }
     else
     {
